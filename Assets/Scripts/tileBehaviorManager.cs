@@ -57,7 +57,14 @@ public class tileBehaviorManager : MonoBehaviour
 
         for (int i = 0; i < toDelete.Count; i++)
         {
-            if (new Vector3Int(toDelete[i].r, toDelete[i].c) == startingPos) continue;
+            if (new Vector3Int(toDelete[i].r, toDelete[i].c) == startingPos)
+            {
+                if (tm.GetTile(startingPos))
+                {
+                    tm.SetTile(startingPos, null);
+                    continue;
+                }
+            }
             tm.SetTile(new Vector3Int(toDelete[i].r, toDelete[i].c), null);
             Instantiate(tileDestroyEffect, new Vector3Int(toDelete[i].r, toDelete[i].c), Quaternion.identity);
             pc.checkFall();
