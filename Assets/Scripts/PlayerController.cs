@@ -181,7 +181,7 @@ public class PlayerController : MonoBehaviour
         if (tm.GetTile(new Vector3Int(playerPos.x, playerPos.y, 0)) == pg.healthTile)
         {
             hc.incHealth();
-            tm.SetTile(new Vector3Int(playerPos.x, playerPos.y), pg.emptyTile);
+            tm.SetTile(new Vector3Int(playerPos.x, playerPos.y), null);
         }
     }
 }

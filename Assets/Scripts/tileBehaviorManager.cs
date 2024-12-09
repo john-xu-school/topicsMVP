@@ -46,12 +46,14 @@ public class tileBehaviorManager : MonoBehaviour
 
     public void cascade(Vector3Int pos, TileBase tileBase)
     {
-        
+        visited = new bool[rows, cols];
         startingPos = pos;
 
         Instantiate(tileDestroyEffect, startingPos, Quaternion.identity);
         
         List<(int r, int c)> toDelete = findConnected(pos, tileBase, visited);
+
+        Debug.Log(toDelete.Count);
 
         for (int i = 0; i < toDelete.Count; i++)
         {
@@ -119,6 +121,8 @@ public class tileBehaviorManager : MonoBehaviour
         {
             int r = shouldFallBlocks[i].x;
             int c = shouldFallBlocks[i].y;
+
+            if (shouldFallBlocks[i] == startingPos) continue;
 
             TileBase block = tm.GetTile(new Vector3Int(r, c));
 
