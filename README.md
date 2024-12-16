@@ -2,7 +2,7 @@
 
 # About the Game
 
-The player's objective is to navigate through a procedurally generated tilemap of 50 rows by 4 columns, aiming to reach the bottom as fast as possible by "digging" through colored tiles. The player can move horizontally between columns and dig down vertically, with adjacent tiles of the same color being destroyed simultaneously. Tiles will fall when there are no tiles directly underneath them. They will stop when an adjacent tile is of the same color or reached a tile underneath them. Every time the player digs, they lose a certain amount of health. Picking up healing tiles randomly generated throughout the map will help the player regain health.
+The player's objective is to navigate through a procedurally generated tilemap of 50 rows by 5 columns, aiming to reach the bottom as fast as possible by "digging" through colored tiles. The player can move horizontally between columns and dig down vertically, with adjacent tiles of the same color being destroyed simultaneously. Tiles will fall when there are no tiles directly underneath them. They will stop when an adjacent tile is of the same color or reached a tile underneath them. Every time the player digs, they lose a certain amount of health. Picking up healing tiles randomly generated throughout the map will help the player regain health.
 
 ![game gif](https://github.com/john-xu-school/topicsMVP/blob/main/game_gif.gif)
 
